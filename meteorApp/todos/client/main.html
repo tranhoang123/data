@@ -1,0 +1,22 @@
+<template name="leaderboard">
+  <ol class="leaderboard">
+    {{#each players}}
+      {{> player}}
+    {{else}}  
+      {{> no_player}}
+    {{/each}}
+  </ol>
+</template> 
+
+<template name="player">
+  <li class="player {{selected}}">
+    <span class="name">{{name}}</span>
+    <span class="score">{{score}}</span>
+  </li>
+</template>
+
+<template name="no_players">
+  <li class="no-players">
+    no players avaible
+  </li>
+</template>
